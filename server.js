@@ -17,10 +17,10 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MySQL connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'Yashika@1234',
-  database: 'student_data'
+  host: 'sql12.freesqldatabase.com',
+  user: 'sql12725009',
+  password: 'tv78mirQVw',
+  database: 'sql12725009'
 });
 
 db.connect((err) => {
