@@ -4,9 +4,10 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
-
+const dotenv = require('dotenv');
+dotenv.config();
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT|| 4000;
 
 // Middleware
 app.use(cors());
@@ -17,10 +18,10 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MySQL connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'Yashika@1234',
-  database: 'student_data'
+  host: 'sql12.freesqldatabase.com',
+  user: 'sql12727109',
+  password: 'xFKGfCKCGH',
+  database: 'sql12727109'
 });
 
 db.connect((err) => {
